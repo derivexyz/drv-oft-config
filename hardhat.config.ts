@@ -60,26 +60,46 @@ const config: HardhatUserConfig = {
             eid: EndpointId.ETHEREUM_V2_MAINNET,
             url: process.env.RPC_URL_MAINNET,
             accounts,
+            safeConfig: {
+                safeUrl: 'https://app.safe.global/home?safe=eth:0x246d38588b16Dd877c558b245e6D5a711C649fCF',
+                safeAddress: '0x246d38588b16Dd877c558b245e6D5a711C649fCF',
+            },
         },
         'optimism-mainnet': {
             eid: EndpointId.OPTIMISM_V2_MAINNET,
             url: process.env.RPC_URL_OPTIMISM,
             accounts,
+            safeConfig: {
+                safeUrl: 'https://app.safe.global/home?safe=oeth:0xD4C00FE7657791C2A43025dE483F05E49A5f76A6',
+                safeAddress: '0xD4C00FE7657791C2A43025dE483F05E49A5f76A6',
+            },
         },
         'derive-mainnet': {
             eid: EndpointId.LYRA_V2_MAINNET,
             url: process.env.RPC_URL_DERIVE,
             accounts,
+            safeConfig: {
+                safeUrl: 'https://lyra-safe.altlayer.io/home?safe=lyra:0xB176A44D819372A38cee878fB0603AEd4d26C5a5',
+                safeAddress: '0xB176A44D819372A38cee878fB0603AEd4d26C5a5',
+            },
         },
         'arbitrum-mainnet': {
             eid: EndpointId.ARBITRUM_V2_MAINNET,
             url: process.env.RPC_URL_ARBITRUM,
             accounts,
+            safeConfig: {
+                safeUrl: 'https://app.safe.global/home?safe=arb1:0x2CcF21e5912e9ecCcB0ecdEe9744E5c507cf88AE',
+                safeAddress: '0x2CcF21e5912e9ecCcB0ecdEe9744E5c507cf88AE',
+            },
         },
         'base-mainnet': {
             eid: EndpointId.BASE_V2_MAINNET,
             url: process.env.RPC_URL_BASE,
             accounts,
+            safeConfig: {
+                safeUrl: 'https://app.safe.global/home?safe=base:0xbfA8B86391c5eCAd0eBe2B158D9Cd9866DDBAaDa',
+                safeAddress: '0xbfA8B86391c5eCAd0eBe2B158D9Cd9866DDBAaDa',
+            },
         },
         hardhat: {
             // Need this for testing because TestHelperOz5.sol is exceeding the compiled contract size limit
